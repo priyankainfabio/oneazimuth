@@ -331,7 +331,7 @@ a {
   margin-top: 0;
   background:
     linear-gradient(0deg, rgba(0, 0, 0, 0.03), rgba(0, 0, 0, 0.03)),
-    url("https://kaashimukthi.com/wp-content/uploads/2023/05/Kaashi-Home-Banner-clr-Mob.jpg")
+    url("/h.jpg")
       center / cover;
   animation: heroImageCycle 24s infinite;
 }
@@ -377,7 +377,7 @@ a {
   22% {
     background:
       linear-gradient(0deg, rgba(0, 0, 0, 0.03), rgba(0, 0, 0, 0.03)),
-      url("https://kaashimukthi.com/wp-content/uploads/2023/05/Kaashi-Home-Banner-clr-Mob.jpg")
+      url("/h1.png")
         center / cover;
   }
 
@@ -385,7 +385,7 @@ a {
   47% {
     background:
       linear-gradient(0deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05)),
-      url("https://www.lastjourney.in/uploaded_files/gallery/Ac-Ambulance.jpeg")
+      url("/h4.jpg")
         center / cover;
   }
 
@@ -393,7 +393,7 @@ a {
   72% {
     background:
       linear-gradient(0deg, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.04)),
-      url("https://beleiv.com/wp-content/uploads/2025/02/Comprehensive-Guide-to-Indian-Funeral-and-Death-Rituals.png")
+      url("/h1.png")
         center / cover;
   }
 
@@ -542,7 +542,7 @@ textarea {
 }
 
 .services-grid article:nth-child(1) {
-  --service-bg: url("https://www.lastjourney.in/uploaded_files/gallery/Ac-Ambulance.jpeg");
+  --service-bg: url("/h4.jpg");
 }
 
 .services-grid article:nth-child(2) {
@@ -550,19 +550,19 @@ textarea {
 }
 
 .services-grid article:nth-child(3) {
-  --service-bg: url("https://beleiv.com/wp-content/uploads/2025/02/Comprehensive-Guide-to-Indian-Funeral-and-Death-Rituals.png");
+  --service-bg: url("/h3.jpg");
 }
 
 .services-grid article:nth-child(4) {
-  --service-bg: url("https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&w=900&q=80");
+  --service-bg: url("/h2.webp");
 }
 
 .services-grid article:nth-child(5) {
-  --service-bg: url("https://kaashimukthi.com/wp-content/uploads/2023/05/Kaashi-Home-Banner-clr-Mob.jpg");
+  --service-bg: url("/h.jpg");
 }
 
 .services-grid article:nth-child(6) {
-  --service-bg: url("https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=900&q=80");
+  --service-bg: url("/h2.png");
 }
 
 .services-grid h3 {
@@ -593,7 +593,7 @@ textarea {
   border-radius: 4px;
   background:
     linear-gradient(90deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0)),
-    url("https://beleiv.com/wp-content/uploads/2025/02/Comprehensive-Guide-to-Indian-Funeral-and-Death-Rituals.png")
+    url("/h1.png")
       center / cover;
 }
 
