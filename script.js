@@ -3,7 +3,7 @@ const menu = document.querySelector("[data-menu]");
 const year = document.querySelector("[data-year]");
 const forms = document.querySelectorAll("form");
 const revealItems = document.querySelectorAll(
-  ".stats, .stat-box, .services .section-title, .services-grid article, .support-photo, .support-card, .audience .section-title, .pill-grid span, .testimonials .section-title, .testimonial-grid figure, .cta-copy, .lead-form, .final-close"
+  ".stats, .stat-box, .services .section-title, .services-grid article, .support-photo, .support-card, .why-heading, .why-card, .why-strip, .testimonials .section-title, .testimonial-grid figure, .cta-copy, .lead-form, .final-close"
 );
 
 if (year) {
