@@ -2,6 +2,9 @@ const toggle = document.querySelector(".menu-btn");
 const menu = document.querySelector("[data-menu]");
 const year = document.querySelector("[data-year]");
 const forms = document.querySelectorAll("form");
+const revealItems = document.querySelectorAll(
+  ".stats, .stat-box, .services .section-title, .services-grid article, .support-photo, .support-card, .audience .section-title, .pill-grid span, .testimonials .section-title, .testimonial-grid figure, .cta-copy, .lead-form, .final-close"
+);
 
 if (year) {
   year.textContent = new Date().getFullYear();
@@ -38,3 +41,26 @@ forms.forEach((form) => {
     }, 2600);
   });
 });
+
+if ("IntersectionObserver" in window) {
+  revealItems.forEach((item, index) => {
+    item.classList.add("reveal-on-scroll");
+    item.style.setProperty("--reveal-delay", `${Math.min(index % 6, 5) * 70}ms`);
+  });
+
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.14 }
+  );
+
+  revealItems.forEach((item) => revealObserver.observe(item));
+} else {
+  revealItems.forEach((item) => item.classList.add("is-visible"));
+}
