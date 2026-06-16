@@ -242,7 +242,7 @@ a {
   content: "";
   position: absolute;
   inset: 0;
-  background: url("azimuth-hero-fleet.png") 62% center / cover;
+  background: url("azimuth-van-hero.png") 62% center / cover;
   transform: scale(1.02);
 }
 
@@ -258,16 +258,16 @@ a {
 @keyframes azimuthHeroCycle {
   0%,
   42% {
-    background-image: url("azimuth-hero-fleet.png");
+    background-image: url("azimuth-van-hero.png");
   }
 
   50%,
   92% {
-    background-image: url("azimuth-hero-fleet.png");
+    background-image: url("azimuth-van-hero.png");
   }
 
   100% {
-    background-image: url("azimuth-hero-fleet.png");
+    background-image: url("azimuth-van-hero.png");
   }
 }
 
@@ -621,7 +621,7 @@ textarea {
 .services {
   background:
     linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.94)),
-    url("azimuth-deployment-fleet.png") center / cover fixed;
+    url("azimuth-fabrication.png") center / cover fixed;
 }
 
 .section-title {
@@ -684,11 +684,11 @@ textarea {
 }
 
 .services-grid article:nth-child(1) {
-  --service-bg: url("azimuth-deployment-fleet.png");
+  --service-bg: url("azimuth-van-white.png");
 }
 
 .services-grid article:nth-child(2) {
-  --service-bg: url("azimuth-hero-fleet.png");
+  --service-bg: url("azimuth-van-black.png");
 }
 
 .services-grid article:nth-child(3) {
@@ -700,11 +700,11 @@ textarea {
 }
 
 .services-grid article:nth-child(5) {
-  --service-bg: url("azimuth-deployment-fleet.png");
+  --service-bg: url("azimuth-hero-fleet.png");
 }
 
 .services-grid article:nth-child(6) {
-  --service-bg: url("azimuth-hero-fleet.png");
+  --service-bg: url("azimuth-van-hero.png");
 }
 
 .services-grid h3 {
@@ -1035,7 +1035,7 @@ textarea {
 }
 
 .why-card:nth-child(3) {
-  --why-img: url("azimuth-hero-fleet.png");
+  --why-img: url("azimuth-van-black.png");
 }
 
 .why-card:nth-child(4) {
@@ -1047,7 +1047,7 @@ textarea {
 }
 
 .why-card:nth-child(6) {
-  --why-img: url("azimuth-interior-features.png");
+  --why-img: url("azimuth-van-white.png");
 }
 
 .why-copy {
@@ -1378,7 +1378,7 @@ textarea {
 }
 
 .audience-card:nth-child(2) {
-  --audience-img: url("azimuth-hero-fleet.png");
+  --audience-img: url("azimuth-van-black.png");
 }
 
 .audience-card:nth-child(3) {
@@ -1386,7 +1386,7 @@ textarea {
 }
 
 .audience-card:nth-child(4) {
-  --audience-img: url("w2.png");
+  --audience-img: url("azimuth-hero-fleet.png");
 }
 
 .audience-card:nth-child(5) {
@@ -1394,15 +1394,15 @@ textarea {
 }
 
 .audience-card:nth-child(6) {
-  --audience-img: url("azimuth-deployment-fleet.png");
+  --audience-img: url("azimuth-van-white.png");
 }
 
 .audience-card:nth-child(7) {
-  --audience-img: url("azimuth-hero-fleet.png");
+  --audience-img: url("azimuth-interior-features.png");
 }
 
 .audience-card:nth-child(8) {
-  --audience-img: url("azimuth-fabrication.png");
+  --audience-img: url("azimuth-van-hero.png");
 }
 
 .audience-card-copy {
@@ -2473,4 +2473,18 @@ textarea {
   .credit-pill {
     justify-content: flex-start;
   }
+}
+
+/* Navbar Logo */
+.hero-brand img{
+  height: 70px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Footer Logo */
+.footer-logo img{
+  height: 90px;
+  width: auto;
+  object-fit: contain;
 }
