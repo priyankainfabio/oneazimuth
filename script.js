@@ -2,8 +2,9 @@ const toggle = document.querySelector(".menu-btn");
 const menu = document.querySelector("[data-menu]");
 const year = document.querySelector("[data-year]");
 const forms = document.querySelectorAll("form");
+const heroNav = document.querySelector(".hero-nav");
 const revealItems = document.querySelectorAll(
-  ".stats, .stat-box, .services .section-title, .services-grid article, .support-photo, .support-card, .why-heading, .why-card, .why-strip, .testimonials .section-title, .testimonial-grid figure, .cta-copy, .lead-form, .final-close"
+  ".stats, .stat-box, .services .section-title, .services-grid article, .infra-copy, .infra-map, .fleet-copy, .fleet-list > div, .why-heading, .why-card, .why-strip, .testimonials .section-title, .testimonial-grid figure, .partner-vehicle, .cta-copy, .lead-form, .partner-final"
 );
 
 if (year) {
@@ -13,6 +14,14 @@ if (year) {
 if (window.lucide) {
   window.lucide.createIcons();
 }
+
+const updateNavState = () => {
+  if (!heroNav) return;
+  heroNav.classList.toggle("is-scrolled", window.scrollY > 40);
+};
+
+updateNavState();
+window.addEventListener("scroll", updateNavState, { passive: true });
 
 if (toggle && menu) {
   toggle.addEventListener("click", () => {
