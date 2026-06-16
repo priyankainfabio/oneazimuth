@@ -242,8 +242,7 @@ a {
   content: "";
   position: absolute;
   inset: 0;
-  background: url("hero-hospital-1.png") center / cover;
-  animation: azimuthHeroCycle 14s ease-in-out infinite;
+  background: url("azimuth-hero-fleet.png") 62% center / cover;
   transform: scale(1.02);
 }
 
@@ -252,23 +251,23 @@ a {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(2, 16, 26, 0.98) 0%, rgba(2, 16, 26, 0.86) 29%, rgba(2, 16, 26, 0.38) 58%, rgba(2, 16, 26, 0.08) 100%),
+    linear-gradient(90deg, rgba(2, 16, 26, 0.98) 0%, rgba(2, 16, 26, 0.88) 34%, rgba(2, 16, 26, 0.5) 62%, rgba(2, 16, 26, 0.12) 100%),
     linear-gradient(180deg, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.2));
 }
 
 @keyframes azimuthHeroCycle {
   0%,
   42% {
-    background-image: url("hero-hospital-1.png");
+    background-image: url("azimuth-hero-fleet.png");
   }
 
   50%,
   92% {
-    background-image: url("hero-hospital-2.png");
+    background-image: url("azimuth-hero-fleet.png");
   }
 
   100% {
-    background-image: url("hero-hospital-1.png");
+    background-image: url("azimuth-hero-fleet.png");
   }
 }
 
@@ -605,15 +604,24 @@ textarea {
   color: rgba(255, 255, 255, 0.72);
 }
 
-.services {
+.problem-section,
+.services,
+.partner-audience,
+.features-section {
   position: relative;
   max-width: none;
   margin: 0 auto;
   padding: 92px max(26px, calc((100vw - 1240px) / 2));
+}
+
+.problem-section {
+  background: #fbfaf7;
+}
+
+.services {
   background:
-    linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.93)),
-    url("https://www.lastjourney.in/uploaded_files/gallery/Ac-Ambulance.jpeg")
-      center / cover fixed;
+    linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.94)),
+    url("azimuth-deployment-fleet.png") center / cover fixed;
 }
 
 .section-title {
@@ -676,34 +684,34 @@ textarea {
 }
 
 .services-grid article:nth-child(1) {
-  --service-bg: url("/h4.jpg");
+  --service-bg: url("azimuth-deployment-fleet.png");
 }
 
 .services-grid article:nth-child(2) {
-  --service-bg: url("https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=900&q=80");
+  --service-bg: url("azimuth-hero-fleet.png");
 }
 
 .services-grid article:nth-child(3) {
-  --service-bg: url("/h3.jpg");
+  --service-bg: url("azimuth-fabrication.png");
 }
 
 .services-grid article:nth-child(4) {
-  --service-bg: url("/h2.webp");
+  --service-bg: url("azimuth-deployment-fleet.png");
 }
 
 .services-grid article:nth-child(5) {
-  --service-bg: url("/h.jpg");
+  --service-bg: url("azimuth-deployment-fleet.png");
 }
 
 .services-grid article:nth-child(6) {
-  --service-bg: url("/h2.png");
+  --service-bg: url("azimuth-hero-fleet.png");
 }
 
 .services-grid h3 {
   width: 100%;
-  min-height: 76px;
+  min-height: auto;
   margin: 0;
-  padding: 20px 18px;
+  padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -711,6 +719,90 @@ textarea {
   font-size: 23px;
   line-height: 1.25;
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+}
+
+.solution-grid article {
+  align-items: stretch;
+  justify-content: flex-end;
+  text-align: left;
+}
+
+.solution-grid article > div {
+  width: 100%;
+  min-height: 120px;
+  margin-top: auto;
+  padding: 24px;
+  display: grid;
+  align-content: end;
+  background: linear-gradient(180deg, transparent, rgba(3, 12, 18, 0.9) 20%);
+}
+
+.solution-grid p {
+  margin: 10px 0 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.problem-grid,
+.audience-grid,
+.feature-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.problem-grid {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.problem-grid article,
+.audience-grid article,
+.feature-grid article {
+  position: relative;
+  overflow: hidden;
+  min-height: 190px;
+  padding: 26px 22px;
+  display: grid;
+  align-content: start;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+}
+
+.problem-grid article {
+  background: var(--white);
+  border: 1px solid var(--line);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+.problem-grid article:hover,
+.audience-grid article:hover,
+.feature-grid article:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.14);
+}
+
+.problem-grid i,
+.audience-grid i,
+.feature-grid i {
+  width: 34px;
+  height: 34px;
+  margin-bottom: 18px;
+  color: var(--gold);
+}
+
+.problem-grid h3,
+.audience-grid h3,
+.feature-grid h3 {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.28;
+}
+
+.problem-grid p {
+  margin: 12px 0 0;
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.58;
 }
 
 .solution-section {
@@ -935,27 +1027,27 @@ textarea {
 }
 
 .why-card:nth-child(1) {
-  --why-img: url("/w1.png");
+  --why-img: url("azimuth-interior-features.png");
 }
 
 .why-card:nth-child(2) {
-  --why-img: url("https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=900&q=80");
+  --why-img: url("azimuth-fabrication.png");
 }
 
 .why-card:nth-child(3) {
-  --why-img: url("https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80");
+  --why-img: url("azimuth-hero-fleet.png");
 }
 
 .why-card:nth-child(4) {
-  --why-img: url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=900&q=80");
+  --why-img: url("india-network-map.png");
 }
 
 .why-card:nth-child(5) {
-  --why-img: url("/w2.png");
+  --why-img: url("azimuth-deployment-fleet.png");
 }
 
 .why-card:nth-child(6) {
-  --why-img: url("/w3.webp");
+  --why-img: url("azimuth-interior-features.png");
 }
 
 .why-copy {
@@ -1089,6 +1181,416 @@ textarea {
   display: block;
 }
 
+.partner-audience {
+  min-height: 640px;
+  padding: 86px 0 66px;
+  display: grid;
+  grid-template-columns: minmax(360px, 28vw) minmax(0, 1fr);
+  gap: 54px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 58% 32%, rgba(28, 70, 97, 0.18), transparent 28%),
+    radial-gradient(circle at 16% 64%, rgba(183, 134, 45, 0.08), transparent 22%),
+    linear-gradient(135deg, #020a12 0%, #04111b 52%, #01070d 100%);
+  color: var(--white);
+}
+
+.partner-audience-copy {
+  padding-left: max(26px, calc((100vw - 1500px) / 2 + 26px));
+  align-self: start;
+}
+
+.partner-audience-copy > span {
+  display: block;
+  margin-bottom: 14px;
+  color: #e4a236;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+}
+
+.partner-audience-copy h2 {
+  margin: 0;
+  color: var(--white);
+  font-size: clamp(50px, 4.2vw, 68px);
+  font-weight: 800;
+  line-height: 0.98;
+}
+
+.partner-audience-copy h2 strong {
+  display: block;
+  margin-top: 10px;
+  color: #d8a23e;
+  font-weight: 800;
+}
+
+.partner-audience-rule {
+  width: 82px;
+  height: 3px;
+  margin: 22px 0 22px;
+  background: #d8a23e;
+}
+
+.partner-audience-copy p {
+  max-width: 360px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 18px;
+  line-height: 1.52;
+}
+
+.partner-audience-stats {
+  max-width: 360px;
+  margin-top: 26px;
+  display: grid;
+  gap: 16px;
+}
+
+.partner-audience-stats > div {
+  min-height: 76px;
+  padding-bottom: 14px;
+  display: grid;
+  grid-template-columns: 66px 1fr;
+  gap: 14px;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.partner-audience-stats i {
+  width: 52px;
+  height: 52px;
+  padding: 13px;
+  border: 1px solid #d8a23e;
+  border-radius: 50%;
+  color: #d8a23e;
+}
+
+.partner-audience-stats span {
+  color: var(--white);
+  font-size: 16px;
+  line-height: 1.35;
+}
+
+.partner-audience-stats strong {
+  display: block;
+  margin-bottom: 3px;
+  color: #d8a23e;
+  font-size: 31px;
+  line-height: 1;
+}
+
+.partner-audience-cta {
+  width: max-content;
+  min-height: 52px;
+  margin-top: 20px;
+  padding: 14px 28px;
+  display: inline-flex;
+  align-items: center;
+  gap: 22px;
+  border: 1px solid #d8a23e;
+  border-radius: 7px;
+  color: var(--white);
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+
+.partner-audience-cta i {
+  width: 18px;
+  height: 18px;
+  color: #d8a23e;
+}
+
+.partner-audience-cta:hover {
+  transform: translateY(-3px);
+  background: #d8a23e;
+  color: #06111a;
+}
+
+.partner-audience-cta:hover i {
+  color: #06111a;
+}
+
+.audience-carousel {
+  min-width: 0;
+  padding-right: max(26px, calc((100vw - 1500px) / 2 + 26px));
+  display: grid;
+  align-content: start;
+  gap: 22px;
+}
+
+.audience-track {
+  min-width: 0;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(230px, 260px);
+  gap: 12px;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.audience-track::-webkit-scrollbar {
+  display: none;
+}
+
+.audience-card {
+  position: relative;
+  min-height: 520px;
+  overflow: hidden;
+  display: grid;
+  align-content: end;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 8px;
+  background: #06111a;
+  scroll-snap-align: start;
+  box-shadow: 0 22px 48px rgba(0, 0, 0, 0.24);
+}
+
+.audience-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(2, 10, 18, 0.05) 0%, rgba(2, 10, 18, 0.2) 34%, rgba(2, 10, 18, 0.95) 100%),
+    linear-gradient(90deg, rgba(4, 16, 26, 0.25), transparent);
+}
+
+.audience-card-img {
+  position: absolute;
+  inset: 0;
+  background: var(--audience-img) center / cover;
+  transition: transform 0.45s ease, filter 0.45s ease;
+}
+
+.audience-card:hover .audience-card-img {
+  transform: scale(1.06);
+  filter: brightness(1.07);
+}
+
+.audience-card:nth-child(1) {
+  --audience-img: url("azimuth-deployment-fleet.png");
+}
+
+.audience-card:nth-child(2) {
+  --audience-img: url("azimuth-hero-fleet.png");
+}
+
+.audience-card:nth-child(3) {
+  --audience-img: url("india-network-map.png");
+}
+
+.audience-card:nth-child(4) {
+  --audience-img: url("w2.png");
+}
+
+.audience-card:nth-child(5) {
+  --audience-img: url("azimuth-fabrication.png");
+}
+
+.audience-card:nth-child(6) {
+  --audience-img: url("azimuth-deployment-fleet.png");
+}
+
+.audience-card:nth-child(7) {
+  --audience-img: url("azimuth-hero-fleet.png");
+}
+
+.audience-card:nth-child(8) {
+  --audience-img: url("azimuth-fabrication.png");
+}
+
+.audience-card-copy {
+  position: relative;
+  z-index: 2;
+  min-height: 300px;
+  padding: 0 22px 28px;
+  display: grid;
+  align-content: start;
+}
+
+.audience-card-copy > i {
+  width: 72px;
+  height: 72px;
+  margin-bottom: 26px;
+  padding: 17px;
+  border: 1px solid #d8a23e;
+  border-radius: 50%;
+  color: #d8a23e;
+  stroke-width: 1.75;
+}
+
+.audience-card-copy h3 {
+  min-height: 62px;
+  margin: 0 0 14px;
+  color: var(--white);
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+.audience-card-copy p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 16px;
+  line-height: 1.62;
+}
+
+.audience-controls {
+  display: grid;
+  grid-template-columns: 58px 1fr 58px;
+  gap: 24px;
+  align-items: center;
+}
+
+.audience-arrow {
+  width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.055);
+  color: var(--white);
+  cursor: pointer;
+  transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease;
+}
+
+.audience-arrow:hover {
+  transform: translateY(-3px);
+  background: #d8a23e;
+  color: #06111a;
+}
+
+.audience-arrow i {
+  width: 24px;
+  height: 24px;
+}
+
+.audience-dots {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+}
+
+.audience-dot {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.42);
+  cursor: pointer;
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.audience-dot.is-active {
+  background: #d8a23e;
+  transform: scale(1.2);
+}
+
+.features-section {
+  min-height: 400px;
+  padding: 0;
+  display: grid;
+  grid-template-columns: minmax(520px, 50%) 1fr;
+  align-items: stretch;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 64% 48%, rgba(28, 70, 97, 0.28), transparent 26%),
+    linear-gradient(90deg, #020c14 0%, #03111c 48%, #020911 100%);
+  color: var(--white);
+}
+
+.features-copy {
+  position: relative;
+  z-index: 2;
+  padding: 34px 0 28px max(42px, calc((100vw - 1536px) / 2 + 42px));
+  display: grid;
+  align-content: start;
+}
+
+.features-copy > span {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: #e49d22;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.features-copy h2 {
+  max-width: 340px;
+  margin: 0;
+  color: var(--white);
+  font-size: clamp(29px, 2.1vw, 35px);
+  font-weight: 700;
+  line-height: 1.14;
+}
+
+.feature-rule {
+  width: 48px;
+  height: 1px;
+  margin: 20px 0 18px;
+  background: var(--gold);
+}
+
+.feature-grid {
+  width: min(690px, 100%);
+  display: grid;
+  grid-template-columns: repeat(5, minmax(106px, 1fr));
+  gap: 34px 0;
+}
+
+.feature-grid article {
+  min-height: 72px;
+  padding: 0 22px 0 0;
+  display: grid;
+  align-content: start;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.feature-grid article:hover {
+  transform: translateY(-4px);
+  background: transparent;
+  box-shadow: none;
+}
+
+.feature-grid i,
+.feature-grid svg {
+  width: 25px;
+  height: 25px;
+  margin-bottom: 9px;
+  color: #e49d22;
+  stroke-width: 1.8;
+}
+
+.feature-grid h3 {
+  max-width: 130px;
+  margin: 0;
+  color: var(--white);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.42;
+}
+
+.features-vehicle {
+  min-height: 400px;
+  background:
+    linear-gradient(90deg, rgba(2, 12, 20, 0.78) 0%, rgba(2, 12, 20, 0.08) 20%, rgba(2, 12, 20, 0) 100%),
+    url("vehicle-features-van.png") center right / cover no-repeat;
+  filter: drop-shadow(0 26px 42px rgba(0, 0, 0, 0.44));
+}
+
 .testimonial-grid figcaption strong {
   font-size: 22px;
   line-height: 1.25;
@@ -1123,7 +1625,7 @@ textarea {
 
 .partner-vehicle {
   min-height: 380px;
-  background: url("hero-hospital-1.png") 78% center / cover no-repeat;
+  background: url("azimuth-fabrication.png") 60% center / cover no-repeat;
   filter: drop-shadow(0 24px 44px rgba(0, 0, 0, 0.5));
   border-radius: 10px;
   transition: transform 0.35s ease, filter 0.35s ease;
@@ -1186,7 +1688,7 @@ textarea {
 }
 
 .partner-section textarea {
-  grid-row: span 2;
+  grid-column: 1 / -1;
   min-height: 100px;
 }
 
@@ -1194,7 +1696,7 @@ textarea {
   width: max-content;
   min-height: 48px;
   padding-inline: 24px;
-  grid-column: auto;
+  grid-column: 1 / -1;
 }
 
 .partner-notes {
@@ -1523,6 +2025,9 @@ textarea {
 
   .stats,
   .services-grid,
+  .problem-grid,
+  .audience-grid,
+  .feature-grid,
   .why-grid,
   .testimonial-grid,
   .footer,
@@ -1537,6 +2042,37 @@ textarea {
 
   .infra-features {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .features-section {
+    grid-template-columns: 1fr;
+  }
+
+  .features-copy {
+    padding: 58px 28px 22px;
+  }
+
+  .features-copy h2 {
+    max-width: 560px;
+  }
+
+  .feature-grid {
+    width: 100%;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .feature-grid article:nth-child(3),
+  .feature-grid article:nth-child(6) {
+    border-right: 0;
+  }
+
+  .feature-grid article:nth-child(5) {
+    border-right: 0;
+  }
+
+  .features-vehicle {
+    min-height: 380px;
+    background-position: center;
   }
 
   .partner-final {
@@ -1564,6 +2100,33 @@ textarea {
     width: 76px;
     height: 76px;
     font-size: 20px;
+  }
+
+  .partner-audience {
+    min-height: 0;
+    padding: 74px 0 64px;
+    grid-template-columns: 1fr;
+    gap: 42px;
+  }
+
+  .partner-audience-copy {
+    padding-inline: 28px;
+  }
+
+  .partner-audience-copy h2 {
+    font-size: 58px;
+  }
+
+  .audience-carousel {
+    padding-inline: 28px;
+  }
+
+  .audience-track {
+    grid-auto-columns: minmax(250px, 36vw);
+  }
+
+  .audience-card {
+    min-height: 500px;
   }
 }
 
@@ -1649,6 +2212,9 @@ textarea {
 
   .stats,
   .services-grid,
+  .problem-grid,
+  .audience-grid,
+  .feature-grid,
   .why-grid,
   .testimonial-grid,
   .footer,
@@ -1689,9 +2255,82 @@ textarea {
   }
 
   .services,
+  .problem-section,
+  .features-section,
   .audience,
   .testimonials {
     padding: 64px 18px;
+  }
+
+  .partner-audience {
+    min-height: 0;
+    padding: 58px 0 52px;
+    gap: 32px;
+  }
+
+  .partner-audience-copy {
+    padding-inline: 18px;
+  }
+
+  .partner-audience-copy > span {
+    font-size: 14px;
+  }
+
+  .partner-audience-copy h2 {
+    font-size: 44px;
+  }
+
+  .partner-audience-copy p {
+    font-size: 17px;
+  }
+
+  .partner-audience-stats > div {
+    grid-template-columns: 62px 1fr;
+  }
+
+  .partner-audience-stats i {
+    width: 50px;
+    height: 50px;
+    padding: 12px;
+  }
+
+  .partner-audience-stats strong {
+    font-size: 30px;
+  }
+
+  .partner-audience-cta {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .audience-carousel {
+    padding-inline: 18px;
+  }
+
+  .audience-track {
+    grid-auto-columns: minmax(248px, 82vw);
+  }
+
+  .audience-card {
+    min-height: 480px;
+  }
+
+  .audience-card-copy h3 {
+    font-size: 22px;
+  }
+
+  .audience-controls {
+    grid-template-columns: 48px 1fr 48px;
+    gap: 12px;
+  }
+
+  .audience-arrow {
+    width: 48px;
+    height: 48px;
+  }
+
+  .audience-dots {
+    gap: 10px;
   }
 
   .support {
@@ -1740,6 +2379,45 @@ textarea {
     grid-template-columns: 1fr;
   }
 
+  .features-section {
+    padding: 0;
+    min-height: 0;
+  }
+
+  .features-copy {
+    padding: 46px 18px 18px;
+  }
+
+  .features-copy h2 {
+    font-size: 30px;
+  }
+
+  .feature-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 26px 0;
+  }
+
+  .feature-grid article,
+  .feature-grid article:nth-child(3),
+  .feature-grid article:nth-child(5),
+  .feature-grid article:nth-child(6) {
+    border-right: 0;
+  }
+
+  .feature-grid article:nth-child(2n),
+  .feature-grid article:nth-child(9) {
+    border-right: 0;
+  }
+
+  .features-vehicle {
+    min-height: 260px;
+    margin-top: 8px;
+  }
+
+  .partner-section .lead-form {
+    padding: 0;
+  }
+
   .infra-map {
     min-height: 340px;
   }
@@ -1776,6 +2454,7 @@ textarea {
   .partner-section textarea,
   .partner-section .lead-form button {
     grid-column: 1;
+    width: 100%;
   }
 
   .partner-final {
